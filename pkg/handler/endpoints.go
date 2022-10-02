@@ -10,7 +10,7 @@ func (h *Handler) startingPage(c *gin.Context) {
 }
 
 func (h *Handler) newTransaction(c *gin.Context) {
-	
+
 }
 
 func (h *Handler) cancelByID(c *gin.Context) {
@@ -18,7 +18,9 @@ func (h *Handler) cancelByID(c *gin.Context) {
 }
 
 func (h *Handler) getByID(c *gin.Context) {
-
+	id := c.Param("id")
+	message := "hi " + id
+	c.String(http.StatusOK, message)
 }
 
 func (h *Handler) getByEmail(c *gin.Context) {
